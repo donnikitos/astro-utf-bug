@@ -1,0 +1,31 @@
+{
+	"extends": "astro/tsconfigs/base",
+	"compilerOptions": {
+		"types": ["bun-types"],
+		"plugins": [
+			{
+				"name": "@astrojs/ts-plugin"
+			}
+		],
+		"baseUrl": ".",
+		"paths": {
+			"@assets/*": ["src/assets/*"],
+			"@components/*": ["src/components/*"],
+			"@pages/*": ["src/page_components/*"],
+			"@layouts/*": ["src/layouts/*"],
+			"@configs/*": ["src/configs/*"],
+			"@utils/*": ["src/utils/*"],
+			"~/*": ["src/*"]
+		},
+		"strictNullChecks": true,
+		"allowJs": true,
+		"jsx": "react-jsx",
+		"jsxImportSource": "preact"
+	},
+	"include": [
+		"src/**/*.d.ts",
+		"src/**/*.ts",
+		"src/**/*.tsx",
+		"src/**/*.astro"
+	]
+}
